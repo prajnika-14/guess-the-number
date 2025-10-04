@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess The Number - PlumEvo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <h1>🎮 Guess The Number - by Prajnika 🎮</h1>
+    <p>Enter your range and try to guess the number in 3 tries!</p>
+
+    
+    <div id="range-inputs">
+      <input type="number" id="lower" placeholder="Lower bound">
+      <input type="number" id="upper" placeholder="Upper bound">
+      <button class="btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game" style="display:none;">
+      <p id="message">Enter your guess!</p>
+      <input type="number" id="guess" placeholder="Your guess">
+      <button class="btn" onclick="checkGuess()">Submit Guess</button>
+      <div id="score">Score: 0</div>
+    </div>
+
+    <div id="retry" style="display:none;">
+      <p>Wanna try again?</p>
+      <button class="btn" onclick="startGame()">Yes</button>
+      <button class="btn" onclick="endGame()">No</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
